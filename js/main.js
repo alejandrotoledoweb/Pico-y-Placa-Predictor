@@ -53,4 +53,3 @@ function createCard(verification) {
   column.appendChild(card);
   row.appendChild(column);
 }
-

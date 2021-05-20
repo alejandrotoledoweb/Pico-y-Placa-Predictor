@@ -8,7 +8,7 @@ const lastNumber = placa.slice(6, 7)
 const time1 = '06:00';
 const time2 = '20:00';
 
-export { placa, dia, hora, btn, lastNumber };
+export { placa, dia, hora, btn, lastNumber, time1, time2 };
 
 export function saveInfo() {
   localStorage.setItem('totalInfo', JSON.stringify(totalInfo));
