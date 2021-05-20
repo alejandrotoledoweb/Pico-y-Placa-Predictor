@@ -11,19 +11,21 @@
 </head>
 <body>
 
-  <h1>Pico Y Placa Predictor</h1>
+  
 
-  <form action="submit">
+  <div class="container">
+    <h1>Pico Y Placa Predictor</h1>
     <p>Ingresa tu placa</p>
-    <input type="text" class="placa" name="placa" id="placa" placeholder="PRG0506">
-    <p>Día de la semana</p>
-    <input type="text" name="día" id="día" placeholder="Miércoles">
+    <input type="text" class="placa mb-3" name="placa" id="placa" style="text-transform:uppercase" maxlength = "7" minlength = "7" placeholder="PRG0506" required="required">
+    <p>Día de la semana SIN TILDE</p>
+    <input type="text" name="día" class="mb-3" id="dia" style="text-transform:lowercase" placeholder="lunes" required="required">
     <p>Hora</p>
-    <input type="time" name="time" id="time">
-    <button type="button" class="revisar" >Comprobar</button>
-  </form>
+    <input type="time" name="time" id="time" required="required">
+    <button type="button" class="check" id="revisar" >Comprobar</button>
+  </div> <br><br>
 
-  <div id="row"></div>
-  <script type='module' src="./js/main.js"></script>
+  <div id="row" class="container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./js/main.js" defer></script>
 </body>
 </html>
