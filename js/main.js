@@ -40,9 +40,8 @@ function createCard(verification) {
   const deleteBtn = document.createElement('button');
   deleteBtn.setAttribute('type', 'button');
   deleteBtn.className = 'btn btn-danger ml-2 pl-2 btn-delete';
-  deleteBtn.textContent = 'Delete Book';
-  deleteBtn.addEventListener('click', deleteBook);
-  deleteBtn.addEventListener('click', toggleModal);
+  deleteBtn.textContent = 'Delete Info';
+  deleteBtn.addEventListener('click', deleteInfo);
 
   cardBody.appendChild(cardPlaca);
   cardBody.appendChild(subTitle);
@@ -75,3 +74,25 @@ function cleanInputs() {
   dia.value = '';
   hora.value = '';
 }
+
+function addCheckToInfos() {
+  const check = new Verification(placa.value, dia.value, hora.nodeValue);
+  totalInfo.push(check);
+  saveInfo();
+  newInfo();
+  cleanInputs();
+  const status = document.createElement('p')
+  const lastNumber = check.placa.slice(6, 7)
+  const hour = check.hour
+  const day = check.day.downcase
+  if (checkPlacaAndDay(lastNumber, day)) {
+    if (checkHour(hour)) {
+      status.textContent="Su Vehiculo Puede Circular"
+      cardBody.appendChild(status);
+    }
+  } else {
+    status.textContent="Su Vehiculo NO Puede Circular"
+    cardBody.appendChild(status);
+  }
+}
+
