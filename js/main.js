@@ -49,19 +49,9 @@ function checkPlacaAndDay(lastNumber, day) {
   }
 }
 
-function checkHour(hour) {
-  if (hour > time1 && hour < time2) {
-    return true
-  } else {
-    return false
-  }
-}
-
 function checkHour2(hour) {
   if (hour < time1 || hour > time2) {
     return true
-  } else {
-    return false
   }
 }
 
@@ -162,10 +152,8 @@ function addCheckToInfos() {
   const day = check.dia
   console.log(lastNumber, hour, day)
   if (checkPlacaAndDay(lastNumber, day)) {
-    if (checkHour(hour)) {
-      status.textContent="Su Vehiculo SI Puede Circular"
-      div.appendChild(status);
-    }
+    status.textContent="Su Vehiculo SI Puede Circular"
+    div.appendChild(status);
   } else if (checkHour2(hour)){
     status.textContent="Su Vehiculo SI Puede Circular"
     div.appendChild(status);
