@@ -103,14 +103,13 @@ function createCard(verification) {
 
   const deleteBtn = document.createElement('button');
   deleteBtn.setAttribute('type', 'button');
-  deleteBtn.className = 'btn btn-danger ml-2 pl-2 btn-delete';
+  deleteBtn.className = 'btn btn-info ml-2 pl-2 btn-delete';
   deleteBtn.textContent = 'Borrar para otra revisión';
   deleteBtn.addEventListener('click', deleteInfo);
 
   cardBody.appendChild(cardPlaca);
   cardBody.appendChild(subTitle);
   cardBody.appendChild(cardDia);
-  cardBody.appendChild(deleteBtn);
   card.appendChild(cardBody);
   column.appendChild(card);
   row.appendChild(column);
@@ -150,7 +149,13 @@ function addCheckToInfos() {
   saveInfo();
   newInfo();
   const div = document.getElementById('response')
+  const deleteBtn = document.createElement('button');
+  deleteBtn.setAttribute('type', 'button');
+  deleteBtn.className = 'btn btn-info ml-2 pl-2 btn-delete';
+  deleteBtn.textContent = 'Borrar para otra revisión';
+  deleteBtn.addEventListener('click', deleteInfo);
   const status = document.createElement('p')
+  status.className = "fw-bold"
   const lastNumber = check.placa.slice(6, 7)
   const hour = check.hora
   const day = check.dia
@@ -158,12 +163,15 @@ function addCheckToInfos() {
   if (checkPlacaAndDay(lastNumber, day)) {
     status.textContent="Su Vehiculo SI Puede Circular"
     div.appendChild(status);
+    div.appendChild(deleteBtn);
   } else if (checkHour(hour)){
     status.textContent="Su Vehiculo NO Puede Circular"
     div.appendChild(status);
+    div.appendChild(deleteBtn);
   } else {
     status.textContent="Su Vehiculo SI Puede Circular"
     div.appendChild(status);
+    div.appendChild(deleteBtn);
   }
 
   
