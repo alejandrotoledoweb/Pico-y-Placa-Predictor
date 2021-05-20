@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pico y Placa Predictor</title>
+
+  <link rel="stylesheet" href="./styles/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+
+  <h1>Pico Y Placa Predictor</h1>
+
+  <form action="submit">
+    <p>Ingresa tu placa</p>
+    <input type="text" class="placa" name="placa" id="placa" placeholder="PRG0506">
+    <p>Día de la semana</p>
+    <input type="text" name="día" id="día" placeholder="Miércoles">
+    <p>Hora</p>
+    <input type="time" name="time" id="time">
+    <button type="button" class="revisar" >Comprobar</button>
+  </form>
+
+  <div id="row"></div>
+  <script src="./js/main.js"></script>
+  <script src="./js/checkings.js"></script>
+</body>
+</html>
