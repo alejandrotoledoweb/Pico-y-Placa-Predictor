@@ -13,14 +13,6 @@ function saveInfo() {
   localStorage.setItem('totalInfo', JSON.stringify(totalInfo));
 }
 
-
-function checkPlaca(lasNumber) {
-  switch (lastNumber) {
-    case true:
-
-  }
-}
-
 function checkPlacaAndDay(lastNumber, day) {
   if (day == 'lunes') {
     if (lastNumber >= 0 && lastNumber <= 3) {
