@@ -8,7 +8,6 @@ class Verification {
     this.placa = placa;
     this.dia = dia;
     this.hora = hora;
-    this.lastDigit = lasDigit;
   }
 }
 
@@ -52,4 +51,27 @@ function createCard(verification) {
   card.appendChild(cardBody);
   column.appendChild(card);
   row.appendChild(column);
+}
+
+function resetList() {
+  row.innerHTML = '';
+}
+
+function newInfo() {
+  resetList();
+  totalInfo.forEach((info) => {
+    createCard(info);
+  });
+}
+
+function restoreLocal(totalInfo) {
+  totalInfo = JSON.parse(localStorage.getItem('totalInfo'));
+  if (totalInfo === null) totalInfo = [];
+  newInfo();
+}
+
+function cleanInputs() {
+  placa.value = '';
+  dia.value = '';
+  hora.value = '';
 }
