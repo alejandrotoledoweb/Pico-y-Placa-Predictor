@@ -5,8 +5,10 @@ const hora = document.getElementById('time')
 const createBtn = document.getElementById("revisar")
 const row = document.getElementById('row');
 
-const time1 = '06:00';
-const time2 = '20:00';
+const time1 = '07:00';
+const time2 = '09:30';
+const time3 = '16:00';
+const time4 = '19:30';
 
 
 function saveInfo() {
@@ -15,31 +17,31 @@ function saveInfo() {
 
 function checkPlacaAndDay(lastNumber, day) {
   if (day == 'lunes') {
-    if (lastNumber >= 0 && lastNumber <= 3) {
+    if (lastNumber >= 1 && lastNumber <= 2) {
       return false
     } else {
       return true
     }
   } else if (day == 'martes') {
-    if (lastNumber >= 2 && lastNumber <= 4) {
+    if (lastNumber >= 3 && lastNumber <= 4) {
       return false
     } else {
       return true
     }
   } else if (day == 'miercoles') {
-    if (lastNumber >= 4 && lastNumber <= 7) {
+    if (lastNumber >= 5 && lastNumber <= 6) {
       return false
     } else { 
       return true 
     }
   } else if (day == 'jueves') {
-    if (lastNumber >= 6 && lastNumber <= 9) {
+    if (lastNumber >= 7 && lastNumber <= 8) {
       return false
     } else {
       return true
     }
   } else if (day == 'viernes'){
-    if (lastNumber >= 0 && lastNumber <= 1 && lastNumber <= 9 && lastNumber >= 8) {
+    if (lastNumber == 9 && lastNumber == 0) {
       return false
     } else {
       return true
@@ -49,9 +51,19 @@ function checkPlacaAndDay(lastNumber, day) {
   }
 }
 
-function checkHour2(hour) {
-  if (hour < time1 || hour > time2) {
+function checkHour(hour) {
+  if (hour > time1 && hour < time2) {
     return true
+  } else {
+    return false
+  }
+}
+
+function checkHour2(hour) {
+  if (hour > time3 && hour < time4) {
+    return true
+  } else {
+    return false
   }
 }
 
@@ -154,11 +166,11 @@ function addCheckToInfos() {
   if (checkPlacaAndDay(lastNumber, day)) {
     status.textContent="Su Vehiculo SI Puede Circular"
     div.appendChild(status);
-  } else if (checkHour2(hour)){
-    status.textContent="Su Vehiculo SI Puede Circular"
+  } else if (checkHour2(hour) && checkHour2(hour)){
+    status.textContent="Su Vehiculo NO Puede Circular"
     div.appendChild(status);
   } else {
-    status.textContent="Su Vehiculo NO Puede Circular"
+    status.textContent="Su Vehiculo SI Puede Circular"
     div.appendChild(status);
   }
 

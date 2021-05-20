@@ -3,7 +3,7 @@
 # Pico y Placa Predictor
 
 > This app helps people to check the day and time that they can go out with their cars based on the last digit of their car's number.
-The information was taken from the picture below. Also, taking in mind that this limit occurs from 6:00 to 20:00 hours. Before and after these hours there is free mobilisation. This app applies to the city of Quito, Ecuador.
+The information was taken from the picture below. Also, taking in mind that this limit occurs from 7:00 to 09:30 and from 16:00 to 19:30. Before and after these hours there is free mobilisation. This app applies to the city of Quito, Ecuador.
 
 ![information](./hoy-no-circula.png)
 
