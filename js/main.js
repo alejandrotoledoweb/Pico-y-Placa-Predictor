@@ -1,8 +1,8 @@
 const totalInfo = []
-const placa = document.getElementById('placa')
-const dia = document.getElementById('dia')
-const hora = document.getElementById('time')
-const createBtn = document.getElementById("revisar")
+const placa = document.getElementById('placa');
+const dia = document.getElementById('dia');
+const hora = document.getElementById('time');
+const createBtn = document.getElementById("revisar");
 const row = document.getElementById('row');
 
 const time1 = '07:00';
@@ -52,15 +52,7 @@ function checkPlacaAndDay(lastNumber, day) {
 }
 
 function checkHour(hour) {
-  if (hour > time1 && hour < time2) {
-    return true
-  } else {
-    return false
-  }
-}
-
-function checkHour2(hour) {
-  if (hour > time3 && hour < time4) {
+  if (hour >= time1 && hour <= time2 || hour >= time3 && hour <= time4) {
     return true
   } else {
     return false
@@ -151,7 +143,7 @@ function addCheckToInfos() {
   console.log(placa.value);
   console.log(dia.value);
   console.log(hora.value);
-  const check = new Verification(placa.value , dia.value, hora.value);
+  const check = new Verification(placa.value , dia.value.toLowerCase(), hora.value);
 
   totalInfo.push(check);
 
@@ -166,7 +158,7 @@ function addCheckToInfos() {
   if (checkPlacaAndDay(lastNumber, day)) {
     status.textContent="Su Vehiculo SI Puede Circular"
     div.appendChild(status);
-  } else if (checkHour2(hour) && checkHour2(hour)){
+  } else if (checkHour(hour)){
     status.textContent="Su Vehiculo NO Puede Circular"
     div.appendChild(status);
   } else {
