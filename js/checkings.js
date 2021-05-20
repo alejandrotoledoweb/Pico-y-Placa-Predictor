@@ -39,3 +39,10 @@ export function checkHour(hour) {
     hour.target.textContent = 'Read';
   }
 }
+
+export function deleteInfo(myInfo) {
+  const infoIndex = totalInfo.indexOf(myInfo.target);
+  totalInfo.splice(infoIndex, 1);
+  saveInfo();
+  myInfo.target.offsetParent.parentElement.remove();
+}
