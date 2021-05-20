@@ -78,9 +78,7 @@ function cleanInputs() {
 function addCheckToInfos() {
   const check = new Verification(placa.value, dia.value, hora.nodeValue);
   totalInfo.push(check);
-  saveInfo();
-  newInfo();
-  cleanInputs();
+  
   const status = document.createElement('p')
   const lastNumber = check.placa.slice(6, 7)
   const hour = check.hour
@@ -94,5 +92,14 @@ function addCheckToInfos() {
     status.textContent="Su Vehiculo NO Puede Circular"
     cardBody.appendChild(status);
   }
+
+  saveInfo();
+  newInfo();
+  cleanInputs();
 }
+
+btn.addEventListener('click', addCheckToInfos);
+
+restoreLocal();
+
 

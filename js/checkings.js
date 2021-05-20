@@ -33,10 +33,10 @@ export function checkPlacaAndDay(lastNumber, day) {
 }
 
 export function checkHour(hour) {
-  if (hour.target.textContent >= 'Read') {
-    hour.target.textContent = 'Not Read';
+  if (hora > time1 && hora < time2) {
+    return true
   } else {
-    hour.target.textContent = 'Read';
+    return false
   }
 }
 
