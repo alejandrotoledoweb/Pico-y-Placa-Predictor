@@ -18,12 +18,19 @@ The information was taken from the picture below. Also, taking in mind that this
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://alejandrotoledoweb.github.io/Pico-y-Placa-Predictor/)
+
+## Prerequisites
+
+- Code Editor like Sublime, VSCode.
 
 ## Getting Started
 
-**To get a copy of the code please click on the green button on the top right corner that says code**
-**And run in your console `git clone git@github.com:alejandrotoledoweb/js_library.git`**
+To get a copy of the code please run this command on your terminal or windows powershell `https://github.com/alejandrotoledoweb/Pico-y-Placa-Predictor.git`
+
+Go to the directory of the project running `cd Pico-y-Placa-Predictor` or open this folder in your code editor program.
+
+Then, go to the feature-predictor branch by running this command `git checkout feature-predictor`
 
 ## Setup
 
