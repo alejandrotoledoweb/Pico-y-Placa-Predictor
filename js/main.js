@@ -100,7 +100,7 @@ function createCard(verification) {
   const deleteBtn = document.createElement('button');
   deleteBtn.setAttribute('type', 'button');
   deleteBtn.className = 'btn btn-danger ml-2 pl-2 btn-delete';
-  deleteBtn.textContent = 'Delete Info to Check Again';
+  deleteBtn.textContent = 'Borrar para otra revisión';
   deleteBtn.addEventListener('click', deleteInfo);
 
   cardBody.appendChild(cardPlaca);
